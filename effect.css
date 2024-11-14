@@ -1,0 +1,52 @@
+#ProjectDescription {
+    display: none;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+#ContactInfo {
+    display: none;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+#AboutMeDescription {
+    display: none;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+#ProjectDescription.visible {
+    display: block;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+#ContactInfo.visible {
+    display: block;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+#AboutMeDescription.visible {
+    display: block;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

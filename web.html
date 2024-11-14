@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan's Profile </title>
+    <link rel="stylesheet" href="effect.css">
+    <style>
+        button:hover {
+            color: rgb(194, 19, 237);
+            background-color: #73daf5;
+            text-decoration: none;
+        }
+
+        button:active {
+            color: rgb(231, 255, 135);
+            background-color: rgb(255, 242, 252);
+            text-decoration: none;
+        }
+
+        body {
+            transition: background-color 4s;
+        }
+
+        a:hover 
+        {
+            color: rgb(194, 19, 237);
+            background-color: #73daf5;
+            text-decoration: none;
+        }
+        a:active {
+            color: rgb(231, 255, 135);
+            background-color: rgb(255, 242, 252);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="text">
+        <h1 style="color: rgb(3, 93, 157); padding-top: 15vh; padding-left: 40%; font-size: 100px;"><b>Hello</b></h1>
+    </span>
+    <div class="center-container">
+        <button class="button" id="Resume">Resume</button>
+        <button class="button" id="Project">Project</button>
+        <button class="button" id="AboutMe">About Me</button>
+        <button class="button" id="Contact">Contact</button>
+    </div>
+    <div id="ProjectDescription" class="hidden">
+        <h2>Restaurant Management System</h2>
+        <p>The Restaurant Management System is a Java-based application designed to handle essential functions within a
+            restaurant setting, including menu management, ordering, billing, customer tracking, and staff management.
+            This system is organized using object-oriented principles, creating specific classes to represent real-world
+            entities such as Menu items, Customers, Bills, and Staff (e.g., Waiters). The project involves
+            using both single and doubly linked lists to store and manage dynamically linked data, allowing for
+            efficient manipulation of the restaurant's information.</p>
+    </div>
+    <div id="ContactInfo" class="hidden" style="text-align: center;">
+        <h2>Contact Me</h2>
+        <a href="https://github.com/1RyanChen1">Github</a>
+        <a href="https://www.linkedin.com/in/ryan-chen-068044329/">LinkedIn</a>
+        <a href="mailto:r438chen@uwaterloo.ca">Email</a>
+    </div>
+    <div id="AboutMeDescription" class="hidden">
+        <h2>About Me</h2>
+        <p> First of all, nice to meet you! I am Ryan Chen, an enthusiastic student who is pursuing an electrical
+            engineering degree at the University of Waterloo. I have been coding for almost four years. My main coding
+            languages are Java and C++, however, I am also self-educating in Python to increase my programming
+            capability. I have developed a strong foundation in programming and gained hands-on experience in
+            problem-solving techniques through numerous Java and C++ projects.</p>
+    </div>
+    <style>
+        .center-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 60%;
+            text-align: center;
+            gap: 25px;
+        }
+
+        .button {
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 50%;
+            color: rgb(255, 255, 255);
+            background-color: rgb(3, 93, 157);
+            text-align: center;
+            align-content: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.getElementById("Resume").addEventListener("click", () => {
+            const src = "Resume.pdf";
+            const features = "width=800,height=600,resizable=yes,scrollbars=yes";
+            const newWindow = window.open(src, "_blank", features);
+            if (newWindow) {
+                newWindow.focus();
+            } else {
+                alert("Please allow popups for this website.");
+            }
+        });
+        document.getElementById('Project').addEventListener('click', function () {
+            var content = document.getElementById('ProjectDescription');
+            content.classList.toggle('visible');
+        });
+        document.getElementById('AboutMe').addEventListener('click', function () {
+            var content = document.getElementById('AboutMeDescription');
+            content.classList.toggle('visible');
+        });
+        document.getElementById('Contact').addEventListener('click', function () {
+            var content = document.getElementById('ContactInfo');
+            content.classList.toggle('visible');
+        });
+    </script>
+    <script>
+        function changeBackgroundColor() {
+            const colors = ["#e4e9eb", "#d5eaf0", "#c6ebf5", "#b7eaf7", "#bdfcfb"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+        setInterval(changeBackgroundColor, 4000);
+    </script>
+</body>
+
+</html>
